@@ -20,9 +20,9 @@ const Layout = ({ children, pageName }) => {
         <title>Gatsby Site</title>
       </Helmet>
       <div className="wrapper">
-        <Header />
+        {/* <Header /> */}
         <main>{ children }</main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
