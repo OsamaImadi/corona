@@ -2,16 +2,18 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import L from 'leaflet';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import Layout from 'components/Layout';
 import Map from 'components/Map';
+import Cards from '../components/cards';
 
 const LOCATION = {
   lat: 0,
   lng: 0
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 1.5;
+const DEFAULT_ZOOM = 2;
 
 const IndexPage = () => {
 
@@ -118,7 +120,7 @@ const IndexPage = () => {
       <Helmet>
         <title>Home Page</title>
       </Helmet>
-
+      <Cards />
       <Map {...mapSettings} />
     </Layout>
   );
