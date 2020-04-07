@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Layout from 'components/Layout';
 import Map from 'components/Map';
 import Cards from '../components/cards';
+import WorldGraph from '../components/world-graph';
 
 const LOCATION = {
   lat: 0,
@@ -122,6 +123,7 @@ const IndexPage = () => {
       </Helmet>
       <Cards />
       <Map {...mapSettings} />
+      <WorldGraph />
     </Layout>
   );
 };
