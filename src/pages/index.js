@@ -3,11 +3,14 @@ import Helmet from 'react-helmet';
 import L from 'leaflet';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'semantic-ui-css/semantic.min.css'
 
 import Layout from 'components/Layout';
 import Map from 'components/Map';
 import Cards from '../components/cards';
 import WorldGraph from '../components/world-graph';
+import CovidHeader from '../components/covid-header';
+import Divider from '../components/divider';
 
 const LOCATION = {
   lat: 0,
@@ -121,8 +124,11 @@ const IndexPage = () => {
       <Helmet>
         <title>Home Page</title>
       </Helmet>
+      <CovidHeader />
       <Cards />
+      <Divider heading="World map for COVID-19 Cases" />
       <Map {...mapSettings} />
+      <Divider heading="Graphical Representation of COVID-19 Cases" />
       <WorldGraph />
     </Layout>
   );
