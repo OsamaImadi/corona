@@ -18,9 +18,10 @@ module.exports = {
 
   parserOptions: {
     ecmaVersion: 9,
+    sourceType: "module",
     ecmaFeatures: {
-      jsx: true
-    }
+      "jsx": true,
+  }
   },
 
   plugins: ['react', 'react-hooks'],

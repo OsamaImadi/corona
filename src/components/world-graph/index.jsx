@@ -1,7 +1,8 @@
 import React,{ useState, useEffect } from 'react'
+import Loadable from "@loadable/component"
 import { Dropdown } from 'semantic-ui-react'
 import axios from 'axios'
-import ReactApexChart from "react-apexcharts";
+// import ReactApexChart from "react-apexcharts";
 
 
 import './index.css'
@@ -285,12 +286,16 @@ const WorldGraph = () => {
     onChange={onChange}
     options={countryOptions}
   />
-    <ReactApexChart options={optionsGraph} series={series} type="line" height={500} />
+    <LoadableChart options={optionsGraph} series={series} type="line" height={500} />
     </div>
     </>
    );
 }
+
  
 export default WorldGraph;
 
 
+const LoadableChart = Loadable(() => import('../../../node_modules/react-apexcharts/src/react-apexcharts'))
+
+// export default LoadableChart
